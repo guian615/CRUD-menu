@@ -27,7 +27,7 @@ $sql = "INSERT INTO personal_info( User_Ids,User_Fname,User_Lname, User_password
 VALUES ( ' ','".$Fname."','".$Lname."','".$passW."')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  header("location: edit_save.php");
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
